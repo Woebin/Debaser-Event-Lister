@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Events";
+    List<Event> events = (List<Event>)ViewData["Result"];
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Event</th>
+        <th>Description</th>
+        <th>Venue</th>
+        <th data-width="200">Date</th>
+    </tr>
+    @foreach (Event e in events)
+    {
+        <tr>
+            <td>@e.EventName <br /> @e.SubHead</td>
+            <td>@e.Description</td>
+            <td>@e.Venue</td>
+            <td>@e.EventDate</td>
+        </tr>
+    }
+</table>

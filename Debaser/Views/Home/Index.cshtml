@@ -1,0 +1,18 @@
+﻿@model Debaser.Models.Event
+@{
+}
+
+    <form asp-controller="Events" asp-action="Index" method="get" id="eventForm">
+        <div class="form-group">
+            <fieldset>
+                <legend>Event Search</legend>
+                <label class="checkbox-inline"><input type="checkbox" name="medis"> Medis</label>
+                <label class="checkbox-inline"><input type="checkbox" name="strand"> Strand</label>
+                <label class="checkbox-inline"><input type="checkbox" name="humlegarden"> Humlegården</label>
+            </fieldset>
+        <label>From Date: <input type="date" class="form-control" name="datFrom" value="@DateTime.Today.ToString("yyyy-MM-dd")"/></label>
+        <label>To Date: <input type="date" class="form-control" name="datTo" value="@DateTime.Today.ToString("yyyy-MM-dd")"/></label>
+            <br />
+            <input type="submit" class="btn btn-primary" value="Get Events" />
+        </div>
+    </form>
